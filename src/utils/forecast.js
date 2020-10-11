@@ -10,7 +10,7 @@ const forecast = (lat,long, callback) => {
             console.log(url)
             callback("Invalid Location Coordinates",undefined)
         }else{
-            callback(undefined, response.body.current['weather_descriptions'][0] + ". It is currently " + response.body.current['temperature'] + " degress out. It feels like " + response.body.current['feelslike'] + " degress out")
+            callback(undefined, response.body.current['weather_descriptions'][0] + ". It is currently " + response.body.current['temperature'] + " degress out. It feels like " + response.body.current['feelslike'] + " degress out. Humidity is " + response.body.current.humidity + "%")
         }
     })
 }
